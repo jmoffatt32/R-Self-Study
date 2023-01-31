@@ -1,0 +1,9 @@
+7 Examples Learned from Video 2.3:
+---------------------------------
+
+1.) "integer"" and "numeric" are seperate data types. Namely, "integer" is
+a subclass of "numeric". (1:30)
+
+2.) Use `nchar()` to check the length of a string. (4:23)
+
+3.) Use the `Date` class to store dates in R. (5:54)
