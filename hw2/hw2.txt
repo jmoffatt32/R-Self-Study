@@ -1,0 +1,74 @@
+7 Key Pieces of Information from Video 2.4:
+------------------------------------------
+1.) How to initialize a verctor in R. (0:57)
+2.) Perform arithmetic on elements of a vector. (1:21)
+3.) Use colon operator to shorten vector assignenment. (2:33)
+4.) Arithmetic on two vectors together. (3:18)
+5.) Arithmetic on vectors of different lengths. (4:55)
+6.) Use `any()` and `all()` to compare values in two vectors (6:42)
+7.) Indexing elements out of a vector (9:30)
+
+
+2 Key Pieces of Information from Video 2.5:
+------------------------------------------
+1.) Mean can take additional optional trim argument to remove x% of each end
+of the data. (1:30)
+2.) Mean can take additional optional na.rm argument to specify how to deal 
+with NA values in a vector. (3:30)
+
+8 Key Pieces of Information from Video 3.1:
+------------------------------------------
+1.) How to create a basic dataframe (0:45)
+2.) Create dataframe with named columns (2:30)
+3.) Prevent strings from being created as factors in a dataframe (3:38)
+4.) Easy ways to get dimensions of a dataframe (5:17)
+5.) Assign names to each row in the dataframe (6:58)
+6.) Using head and tail to see first and last n rows of dataframe (8:50)
+7.) Indexing columns and cells out of a dataframe (10:00)
+8.) How to index a column as a dataframe (13:00)
+
+5 Key Pieces of Information from Video 3.2:
+------------------------------------------
+1.) How to create a list in R. (0:48)
+2.) Storing a dataframe in a list (2:25)
+3.) Adding names to a list (4:15)
+4.) Create lists as a type of vector. (6:32)
+5.) Indexing columns from a dataframe embedded in a list (8:13)
+
+5 Key Pieces of Information from Video 3.3:
+------------------------------------------
+1.) Create a new matrix (0:43)
+2.) Get sizes of a matrix (1:51)
+3.) Elementwise arithmetic of a matrix (2:31)
+4.) Taking a dot product of two matricies (3:39)
+5.) Adding names to matrix rows and columns (5:33)
+
+Commands for Visualizations:
+---------------------------
+Histogram w/ Base:
+> hist(diamonds$carat, main="Histogram of Diamonds", xlab="Carats")
+
+Histogram w/ ggplot2:
+> ggplot(diamonds) + geom_histogram(aes(x=carat), binwidth=.1)
+
+Scatterplots w/ Base:
+> plot(price ~ carat, data=diamonds, main="Price vs. Carats")
+
+Scatterplots w/ ggplot2:
+> ggplot(diamonds, aes(x=carat, y=price)) + geom_point(aes(color=color, shape=cut))
+
+Boxplots w/ Base:
+> boxplot(diamonds$carat, main="Carats of Diamonds")
+
+Boxplots w/ ggplot2:
+> ggplot(diamonds, aes(y=carat, x=cut)) + geom_boxplot()
+
+Lineplot w/ ggplot2:
+> ggplot(econ2000, aes(x=month, y=pop)) + geom_line(aes(color=factor(year), group=year)) + scale_color_discrete(name="Year") + scale_y_continuous(labels=comma) + labs(title="Population Growth", x="Month", y="Population") + theme(axis.text.x=element_text(angle=90, hjust=1))
+
+Facet Wrap w/ ggplot2:
+Used to create multiple plots partitoned by a certain column in the data frame.
+The example below creates seperate scatter plots for each color of diamond in the
+dataset, instead of mapping them all onto one scatter plot. 
+> ggplot(diamonds, aes(x=carat, y=price)) + geom_point(aes(color=color)) + facet_wrap(~color)
+

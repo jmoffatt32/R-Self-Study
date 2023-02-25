@@ -47,6 +47,18 @@
     t * 5       # 5 (since TRUE has value of 1)
     f * 5       # 0 (since FALSE has value of 0)
     
+    # Example 6: 
+    1 == 1      # TRUE
+    1 != 1      # FALSE
+    1 < 2       # TRUE
+    1 > 2       # FALSE
+    
+    # Example 7: 
+    "data" == "data"        # TRUE
+    "data" < "stats"        # TRUE
+    "data" > "stats"        # FALSE
+    
+    
     
     
 
