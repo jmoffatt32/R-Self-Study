@@ -146,4 +146,14 @@
     colnames(A) <- c("Left", "Right")
     rownames(A) <- c("One", "Two", "Three", "Four", "Five")
     
+# Questions
+# ---------
+    
+    case <- read.table("lab_method.txt", header = TRUE)
+    
+    # Part (a)
+    # --------
+    
+    
+    
     
