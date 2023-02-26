@@ -149,11 +149,22 @@
 # Questions
 # ---------
     
-    case <- read.table("lab_method.txt", header = TRUE)
+    case <- read.table("lab_method_2.txt", header = TRUE)
     
     # Part (a)
     # --------
+    mean(case$results)
+
+    # Part (b)
+    case$residual <- case$results - mean(case$results)
     
+    # Part (c)
+    case$method[30] <- "B" # First, fix the typo
+    new <- as.numeric(case$method == "B") + 1
+    case$method <- new
+    
+    # Part (d)
+    case <- case[,c("method", "lab", "residual", "results")]
     
     
     
